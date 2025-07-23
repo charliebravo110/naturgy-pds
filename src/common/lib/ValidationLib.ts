@@ -278,7 +278,7 @@ export function validateNIF(id: string): boolean {
   const calculatedletter = LETTERS[idNumber % 23]  
   return idLetter === calculatedletter
 }
-//aqui
+//aqui hago un cambio
 export function validateMobileNumberDoc(mobile: string, document: string ): boolean {
   const telegestion = validateUserCode(document);
   const mobileRegExp =/^[0-9]{9}$/
