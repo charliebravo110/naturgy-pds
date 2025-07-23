@@ -1,3 +1,5 @@
+//ESP: Transforma un array de delegaciones en un array de delegaciones agrupadas por CUPS y tipo de delegado.
+//ENG: Transforms an array of delegations into an array grouped by CUPS and delegate type.
 export function delegationsToSupplyDelegations(delegations: any[]): any[] {
 
   let supplyDelegations: any = []
@@ -25,6 +27,8 @@ export function delegationsToSupplyDelegations(delegations: any[]): any[] {
   return suppliesKeys.map((key) => supplyDelegations[key])
 }
 
+//ESP: Alterna el estado de selección de una delegación por su ID en todas las listas de managers y consultants.
+//ENG: Toggles the checked state of a delegation by its ID in all managers and consultants lists.
 export function manageCheckDelegationById(delegations: any[], delegateId: string): any[] {
   
   const checkedDelegations = delegations.map(delegation => {
@@ -46,6 +50,8 @@ export function manageCheckDelegationById(delegations: any[], delegateId: string
   return checkedDelegations
 }
 
+//ESP: Marca o desmarca todas las delegaciones de un tipo específico (manager o consultant).
+//ENG: Checks or unchecks all delegations of a specific type (manager or consultant).
 export function manageCheckDelegationsByDelegateType(delegations: any[], delegateType: string, checked: boolean): any[] {
   
   const checkedDelegations = delegations.map(delegation => {
@@ -59,6 +65,8 @@ export function manageCheckDelegationsByDelegateType(delegations: any[], delegat
   return checkedDelegations
 }
 
+//ESP: Marca o desmarca todas las delegaciones de un tipo y CUPS específicos.
+//ENG: Checks or unchecks all delegations of a specific type and CUPS.
 export function manageCheckDelegationsByCups(delegations: any[], { cups, delegateType }, checked: boolean): any[] {
   
   const checkedDelegations = delegations.map(delegation => {
