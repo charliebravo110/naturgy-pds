@@ -72,8 +72,7 @@ export function formatDateAndHourString(date: Date): string {
   return formattedDay + formattedMonth + year + formattedHour + formattedMinutes + formattedSeconds
 }
 
-
- hh:mm:ss
+// SonarQube S1119/S1439: Eliminado label innecesario 'hh:mm:ss' según recomendación SonarQube.
 //ESP: Devuelve una cadena con la fecha y hora en formato DD/MM/YYYY HH:MM:SS.
 //ENG: Returns a string with date and time in format DD/MM/YYYY HH:MM:SS.
 export function formatDateAndHourStringWithBars(date: Date): string {
@@ -172,15 +171,13 @@ export function formatCompletDateString(stringDate: string): string {
   if (!stringDate || stringDate.length < 12) return '';
   return stringDate.substr(6, 2) + '/' + stringDate.substr(4, 2) + '/' + stringDate.substr(0, 4) + ' ' + stringDate.substr(8, 2) + ':' + stringDate.substr(10, 2)
 }
-
- hh:mm:ss
+// SonarQube S1119/S1439: Eliminado label innecesario 'hh:mm:ss' según recomendación SonarQube.
 
 export function extractDateFromDateAndHourString(stringDateAndHour: string): string {
   if (!stringDateAndHour || stringDateAndHour.length < 10) return '';
   return stringDateAndHour.substr(0, 10)
 }
-
- hh:mm:ss
+// SonarQube S1119/S1439: Eliminado label innecesario 'hh:mm:ss' según recomendación SonarQube.
 
 export function extractHourFromDateAndHourString(stringDateAndHour: string): string {
   if (!stringDateAndHour || stringDateAndHour.length < 16) return '';
@@ -444,8 +441,7 @@ export function completeDate (date: string): Date {
 
   return new Date(year, month - 1, day, hours, minutes, seconds)
 }
-
- hh:mm:ss
+// SonarQube S1119/S1439: Eliminado label innecesario 'hh:mm:ss' según recomendación SonarQube.
 // OUTPUT DATE
 export function completeDateWithSlash (date: string): Date {
   const day = parseInt(date.substring(0, 2));
