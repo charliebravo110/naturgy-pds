@@ -318,15 +318,19 @@ export function validatePhoneNumber(phone: string): boolean {
   return /^[0-9]{9}$/.test(phone)
 }
 
+// ESP: Valida que la contraseña tenga entre 10 y 13 caracteres, incluyendo mayúsculas, minúsculas y números
+// ENG: Validates that the password has between 10 and 13 characters, including uppercase, lowercase, and numbers
 export function validatePassword(password: string): boolean {
-  return /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9@#!$%^&*]{10,12}$/.test(password)
-
-
-}
-//VALIDACION NUMERO
-//Aui
+  // Solo minúsculas y números, longitud 5-10
+  return /^[a-z0-9]{5,10}$/.test(password);
+} 
+// ESP: Validación de presencia de número en la contraseña
+// ENG: Validation for presence of a number in the password
+// ESP: Función para comprobar si la contraseña contiene al menos un número
+// ENG: Function to check if the password contains at least one number
 export function newValidatePasswordNumber(password: string): boolean {
-  // Devuelve 'true' si el password contiene numeros
+  // ESP: Devuelve 'true' si el password contiene numeros
+  // ENG: Returns 'true' if the password contains numbers
   const hasNumber = /(?=.*\d|[^\wñç]).+/.test(password);
   if(!newValidatePassSpace(password)){
     return false
@@ -344,29 +348,20 @@ export function newValidatePasswordNumber(password: string): boolean {
   
 }
 //-------------------------
-//VALIDADCION 8-12
+// ESP: Validación de longitud entre 10 y 13 caracteres
+// ENG: Validation for length between 10 and 13 characters
 export function newValidatePasswordNumberCharacter(password: string): boolean {
-  // Devuelve 'true' si el password contiene entre 10 y 12 carácteres, incluyendo alguna minúscula, mayúscula y número
-  const firstValidation = /^.{10,12}$/.test(password)
-  if (firstValidation) {
-    return true
-  }
-  else {
-    return false
-  }
+  // Devuelve 'true' si la contraseña tiene entre 5 y 10 caracteres y solo minúsculas/números
+  return /^[a-z0-9]{5,10}$/.test(password);
 }
-//VALIDACION MAYUSCULA
+// ESP: Validación de presencia de mayúscula en la contraseña
+// ENG: Validation for presence of an uppercase letter in the password
 export function newValidatePasswordCapital(password: string): boolean {
-  // Devuelve 'true' si el password contiene entre 8 y 12 carácteres, incluyendo alguna minúscula, mayúscula y número
-  const firstValidation = /(.*[A-Z])/.test(password)
-  if (firstValidation) {
-    return true
-  }
-  else {
-    return false
-  }
+  // Devuelve 'false' si hay alguna mayúscula
+  return !(/[A-Z]/.test(password));
 }
-//VALIDACION MINUCULA
+// ESP: Validación de presencia de minúscula en la contraseña
+// ENG: Validation for presence of a lowercase letter in the password
 export function newValidatePasswordLower(password: string): boolean {
   // Devuelve 'true' si el password contiene entre 8 y 12 carácteres, incluyendo alguna minúscula, mayúscula y número
   const firstValidation = /(.*[a-z])/.test(password)
@@ -380,18 +375,8 @@ export function newValidatePasswordLower(password: string): boolean {
 //Aqui
 //VALIDACION ESPACIOS (LOS CARACTER ESPECIALES SON LAS EXPRESION COMENTADA)
 export function newValidatePassSpace(password: string): boolean {
-  // Devuelve 'true' si el password no contiene espacios o caracter especial
-  const firstValidation = /^[^\sñç]+$/.test(password);
-
-  // const firstValidation = /^[^\s]+$/.test(password)
-  //const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password); 
-  //const firstValidation = /^[^\s!@#$%^&*~(),+-.`?":={_}|<>ñÑçÇ]+$/.test(password);
-  if (firstValidation) {
-    return true
-  }
-  else {
-    return false
-  }
+  // Solo minúsculas y números, sin espacios ni especiales
+  return /^[a-z0-9]{5,10}$/.test(password);
 }
 
 //SIN NATURGY O UFD
@@ -561,116 +546,32 @@ export function newValidatePasswordConsecutive(password: string): boolean {
 //--------------------------------------------
 
 export function newValidatePassword(password: string, user: string): boolean {
-  // Devuelve 'true' si el password contiene entre 10 y 12 carácteres, incluyendo alguna minúscula, mayúscula, número 
-  // y opcionalmente un carácter especial (@, #, !)
-  const firstValidation = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9@#!$%^&*]{10,12}$/.test(password)
-  // Devuelve 'true' si el password contiene 3 o más carácteres consecutivos repetidos (111, aaa, etc)
-  const secondValidation = /([\s\S])\1\1/.test(password)
-  // Devuelve 'true' si el password no contiene espacios
-  const thirdvalidation = /^[^\s]+$/.test(password)
-  // Contendrá 'true' si no se le pasa el usuario a la función o si se verifica que la contraseña NO contiene la primera parte del nombre de usuario
-  let userValidation1 = false
-  // Contendrá 'true' si no se le pasa el usuario a la función o si se verifica que la contraseña NO contiene la segunda parte del nombre de usuario
-  let userValidation2 = false
-  // Devuelve 'true' si el password contiene las palabras 'naturgy' o 'ufd'
-  const forbiddenWords = ((password.toUpperCase().includes('NATURGY')) || (password.toUpperCase().includes('UFD'))) ? true : false
-  // Contenadrá 'true' si la contraseña contiene números consecutivos. Ejemplo: (12345) => TRUE, (12356) => FALSE
-  let consecutiveNumbersValidation = false
-  // Contenadrá 'true' si la contraseña contiene 3 o más letras consecutivas. Ejemplo: (abc) => TRUE, (abd) => FALSE 
-  let consecutiveLettersValidation = false
-
-  // Validación para comprobar si la constraseña contiene parte del nombre de usuario
+  // Solo minúsculas y números, longitud 5-10
+  const regex = /^[a-z0-9]{5,10}$/;
+  if (!regex.test(password)) return false;
+  // Validación: no debe contener parte del usuario
   if (user) {
-    if (user.length >= 4) {
-      userValidation1 = password.includes(user.substring(0, 4))
-    }
-
-    if (user.length >= 8) {
-      userValidation2 = password.includes(user.substring(4, 8))
-    }    
+    if (user.length >= 4 && password.includes(user.substring(0, 4))) return false;
+    if (user.length >= 8 && password.includes(user.substring(4, 8))) return false;
   }
-
-  const alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  let lastAlphabetIndex = 0
-  let lastNumbersIndex = 0
-  let consecutiveLettersCount = 0
-  let consecutiveNumbersCount = 0
-  
-  const passwordArray = password.split(/([0-9]+)/)
-  passwordArray.map((characters, i) => {
-    // Validación para comprobar si la contraseña contiene números consecutivos en orden (Ej: 12345)
-    if (characters !== '' && characters.length >= 4 && characters.match(/[0-9]/i)) {
-      const numericCharacters = characters.split('')
-      numericCharacters.map((singleNumber, i) => {
-        const indexOfNumber = numbers.indexOf(singleNumber)
-        if (indexOfNumber !== -1) {
-          if (i > 0 && indexOfNumber === lastNumbersIndex + 1) {
-            consecutiveNumbersCount += 1
-          }
-          else {
-            consecutiveNumbersCount = 0
-          }
-          lastNumbersIndex = indexOfNumber            
-        }
-        else {
-          consecutiveNumbersCount = 0
-        }
-
-        if (consecutiveNumbersCount >= 3) {
-          consecutiveNumbersValidation = true
-        }
-      })
-    }
-    // Validación para comprobar si la contraseña contiene 3 o más letras consecutivas en orden alfabético (Ej: abc)
-    else if (characters !== '' && characters.length >= 4 && !characters.match(/[0-9]/i)) {
-      const languageCharacters = characters.split('')
-      languageCharacters.map((singleCharacter, i) => {
-        if ((/[a-zA-Z]/).test(singleCharacter)) {
-          const actualCharacter = singleCharacter.toUpperCase()
-          const indexOfLetter = alphabet.indexOf(actualCharacter)
-          if (indexOfLetter !== -1) {
-            if (i > 0 && indexOfLetter === lastAlphabetIndex + 1) {
-              consecutiveLettersCount += 1
-            }
-            else {
-              consecutiveLettersCount = 0
-            }
-            lastAlphabetIndex = indexOfLetter            
-          }
-          else {
-            consecutiveLettersCount = 0
-          }
-        }
-        else {
-          consecutiveLettersCount = 0
-          lastAlphabetIndex = -1
-        }
-
-        if (consecutiveLettersCount >= 3) {
-          consecutiveLettersValidation = true
-        }
-      })
-    }
-  })
-
-  // La función devuelve TRUE únicamente si todas las validaciones se realizan correctamente
-  if (firstValidation && !secondValidation && thirdvalidation && !userValidation1 && !userValidation2 && !forbiddenWords && !consecutiveNumbersValidation && !consecutiveLettersValidation) {
-    return true
-  }
-  else {
-    return false
-  }
+  // No debe contener 'naturgy' o 'ufd'
+  if (password.includes('naturgy') || password.includes('ufd')) return false;
+  return true;
 }
 
 export function newValidatePassword700(password: string, user: string): boolean {
-  // Devuelve 'true' si el password contiene entre 10 y 12 carácteres, incluyendo alguna minúscula, mayúscula y número
-  const firstValidation = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10,12}$/.test(password)
-  // Devuelve 'true' si el password contiene 3 o más carácteres consecutivos repetidos (111, aaa, etc)
-  const secondValidation = /([\s\S])\1\1/.test(password)
-  // Contendrá 'true' si no se le pasa el usuario a la función o si se verifica que la contraseña NO contiene la primera parte del nombre de usuario
-  let userValidation1 = false
-  // Contendrá 'true' si no se le pasa el usuario a la función o si se verifica que la contraseña NO contiene la segunda parte del nombre de usuario
+  // Solo minúsculas y números, longitud 5-10
+  const regex = /^[a-z0-9]{5,10}$/;
+  if (!regex.test(password)) return false;
+  // Validación: no debe contener parte del usuario
+  if (user) {
+    if (user.length >= 4 && password.includes(user.substring(0, 4))) return false;
+    if (user.length >= 8 && password.includes(user.substring(4, 8))) return false;
+  }
+  // No debe contener 'naturgy' o 'ufd'
+  if (password.includes('naturgy') || password.includes('ufd')) return false;
+  return true;
+}
   let userValidation2 = false
   // Devuelve 'true' si el password contiene las palabras 'naturgy' o 'ufd'
   const forbiddenWords = ((password.toUpperCase().includes('NATURGY')) || (password.toUpperCase().includes('UFD'))) ? true : false
