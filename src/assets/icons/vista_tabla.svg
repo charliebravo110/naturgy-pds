@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Mi-consumo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-03_Consumo_Por-meses_gráfica" transform="translate(-1240.000000, -804.000000)">
+            <g id="Group-10" transform="translate(1240.000000, 804.000000)">
+                <rect id="Rectangle-Copy-5" fill="#004571" fill-rule="nonzero" x="0" y="0" width="40" height="40" rx="5"></rect>
+                <g id="Group-15" transform="translate(9.565217, 8.695652)" stroke="#FFFFFF" stroke-width="2">
+                    <rect id="Rectangle" x="1" y="1" width="19.7391304" height="19.7391304" rx="2"></rect>
+                    <path d="M10.8695652,2.5083612 L10.8695652,19.2307692" id="Line-4" stroke-linecap="square"></path>
+                    <path d="M1.6722408,10.8695652 L19.2307692,10.8695652" id="Line-4" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Provisión-de-servicio-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-04_UFD_Mis-suministros-listado" transform="translate(-310.000000, -306.000000)">
+            <g id="Group-5" transform="translate(310.000000, 306.000000)">
+                <rect id="Rectangle-Copy-5" stroke="#E57200" stroke-width="2" fill-rule="nonzero" x="1" y="1" width="44" height="44" rx="5"></rect>
+                <path d="M35.3662377,32.4 L17.7542004,32.4 C17.0283237,32.4 16.44,31.78222 16.44,31.02 C16.44,30.25778 17.0283237,29.64 17.7542004,29.64 L35.3657996,29.64 C36.0916763,29.64 36.68,30.25778 36.68,31.02 C36.68,31.78222 36.0921144,32.4 35.3662377,32.4 Z" id="Path" fill="#E57200"></path>
+                <circle id="Oval" fill="#E57200" cx="11.38" cy="31.02" r="1.38"></circle>
+                <path d="M35.3662375,24.12 L17.7542004,24.12 C17.0283237,24.12 16.44,23.50222 16.44,22.74 C16.44,21.97778 17.0283237,21.36 17.7542004,21.36 L35.3657994,21.36 C36.0916761,21.36 36.68,21.97778 36.68,22.74 C36.6804378,23.50222 36.0921141,24.12 35.3662375,24.12 Z" id="Path" fill="#E57200"></path>
+                <circle id="Oval" fill="#E57200" cx="11.38" cy="22.74" r="1.38"></circle>
+                <path d="M35.3662377,16.76 L17.7542004,16.76 C17.0283237,16.76 16.44,16.14222 16.44,15.38 C16.44,14.61778 17.0283237,14 17.7542004,14 L35.3657996,14 C36.0916763,14 36.68,14.61778 36.68,15.38 C36.68,16.14222 36.0921144,16.76 35.3662377,16.76 Z" id="Path" fill="#E57200"></path>
+                <circle id="Oval" fill="#E57200" cx="11.38" cy="15.38" r="1.38"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

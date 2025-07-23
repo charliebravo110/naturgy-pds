@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico datos /info blanco</title>
+    <g id="ico-datos-/info-blanco" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15,1 C7.272,1 1,7.272 1,15 C1,22.728 7.272,29 15,29 C22.728,29 29,22.728 29,15 C29,7.272 22.728,1 15,1 Z" id="Path" stroke="#FFFFFF" stroke-width="1.8"></path>
+        <path d="M16,20.9896676 C16,20.4317161 15.552,19.9788859 15,19.9788859 C14.448,19.9788859 14.0008889,20.4317161 14.0008889,20.9896676 C14.0008889,21.547619 14.448,22 15,22 C15.552,22 16,21.547619 16,20.9896676 M16,17.4339623 L16,9.0098832 C16,8.45238095 15.5528889,8 15,8 C14.4497778,8 14,8.45238095 14,9.0098832 L14,17.4339623 C14,17.9914645 14.4497778,18.4442947 15,18.4442947 C15.5528889,18.4442947 16,17.9914645 16,17.4339623" id="Fill-1" stroke="#FFFFFF" stroke-width="0.5" fill="#FFFFFF" transform="translate(15.000000, 15.000000) scale(1, -1) translate(-15.000000, -15.000000) "></path>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560px" height="210px" viewBox="0 0 560 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico_cajaCGP</title>
+    <g id="Mi-conexión-a-la-red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-05_UFD_TEN_A_MANO_layer_CGP" transform="translate(-331.000000, -478.000000)">
+            <g id="ico_cajaCGP" transform="translate(331.000000, 478.000000)">
+                <rect id="Rectangle" stroke="#004571" stroke-width="4.05" x="2.025" y="2.025" width="272.97" height="205.74" rx="6.48"></rect>
+                <rect id="Rectangle" stroke="#004571" stroke-width="4.05" x="284.715" y="2.025" width="272.97" height="205.74" rx="6.48"></rect>
+                <g id="Group-33" transform="translate(81.810000, 32.400000)">
+                    <rect id="Rectangle" stroke="#004571" stroke-width="4.05" x="2.025" y="2.025" width="26.73" height="101.25" rx="3.24"></rect>
+                    <path d="M30.78,74.925 L41.715,74.925 C42.6097013,74.925 43.335,75.6502987 43.335,76.545 L43.335,85.455 C43.335,86.3497013 42.6097013,87.075 41.715,87.075 L30.78,87.075 L30.78,87.075" id="Path-8" stroke="#004571" stroke-width="4.05"></path>
+                    <circle id="Oval" fill="#004571" cx="36.855" cy="81.405" r="2.025"></circle>
+                    <path d="M36.855,87.075 C36.4648879,116.04624 37.9098879,134.387907 41.19,142.1 C50.2277946,163.349369 69.19,164.6 69.19,164.6" id="Path-9" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></path>
+                    <line x1="2.43" y1="48.6" x2="27.135" y2="48.6" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                    <line x1="9.72" y1="57.51" x2="20.25" y2="57.51" id="Path-10" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                    <line x1="2.43" y1="67.23" x2="27.135" y2="67.23" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                </g>
+                <g id="Group-33" transform="translate(142.560000, 32.400000)">
+                    <rect id="Rectangle" stroke="#004571" stroke-width="4.05" x="2.025" y="2.025" width="26.73" height="101.25" rx="3.24"></rect>
+                    <path d="M30.78,74.925 L41.715,74.925 C42.6097013,74.925 43.335,75.6502987 43.335,76.545 L43.335,85.455 C43.335,86.3497013 42.6097013,87.075 41.715,87.075 L30.78,87.075 L30.78,87.075" id="Path-8" stroke="#004571" stroke-width="4.05"></path>
+                    <circle id="Oval" fill="#004571" cx="36.855" cy="81.405" r="2.025"></circle>
+                    <path d="M37.105,87.075 C36.7148879,116.04624 38.1598879,134.387907 41.44,142.1 C50.4777946,163.349369 69.44,164.6 69.44,164.6" id="Path-9" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></path>
+                    <line x1="2.43" y1="48.6" x2="27.135" y2="48.6" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                    <line x1="9.72" y1="57.51" x2="20.25" y2="57.51" id="Path-10" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                    <line x1="2.43" y1="67.23" x2="27.135" y2="67.23" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                </g>
+                <g id="Group-33" transform="translate(38.070000, 32.400000)">
+                    <rect id="Rectangle" stroke="#004571" stroke-width="4.05" x="167.265" y="2.025" width="26.73" height="101.25" rx="3.24"></rect>
+                    <path d="M196.02,74.925 L206.955,74.925 C207.849701,74.925 208.575,75.6502987 208.575,76.545 L208.575,85.455 C208.575,86.3497013 207.849701,87.075 206.955,87.075 L196.02,87.075 L196.02,87.075" id="Path-8" stroke="#004571" stroke-width="4.05"></path>
+                    <circle id="Oval" fill="#004571" cx="202.095" cy="81.405" r="2.025"></circle>
+                    <path d="M202.095,87.075 C204.525,121.365 196.56,139.32 178.2,140.94 C150.66,143.37 141.495,162.81 141.495,162.81" id="Path-9" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></path>
+                    <line x1="167.67" y1="48.6" x2="192.375" y2="48.6" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                    <line x1="174.96" y1="57.51" x2="185.49" y2="57.51" id="Path-10" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                    <line x1="167.67" y1="67.23" x2="192.375" y2="67.23" id="Path-10" stroke="#004571" stroke-width="4.05"></line>
+                    <path d="M14.985,93.15 C12.43,164.1 93.15,164.6 93.15,164.6" id="Path-14" stroke="#004571" stroke-width="4.05"></path>
+                    <path d="M0.405,93.15 C0.43,168.6 78.57,164.025 78.57,164.025" id="Path-14" stroke="#004571" stroke-width="4.05"></path>
+                    <line x1="7.29" y1="164.6" x2="196.02" y2="164.6" id="Path-15" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                </g>
+                <path d="M30.375,49.69 L52.245,49.69 C52.6923506,49.69 53.055,50.0526494 53.055,50.5 L53.055,110.97 C53.055,111.417351 53.4176494,111.78 53.865,111.78 L60.345,111.78 C60.7923506,111.78 61.155,112.142649 61.155,112.59 L61.155,124.74 C61.155,125.187351 60.7923506,125.55 60.345,125.55 L33.21,125.55 C32.7626494,125.55 32.4,125.187351 32.4,124.74 L32.4,112.59 C32.4,112.142649 32.7626494,111.78 33.21,111.78 L40.5,111.78 C40.9473506,111.78 41.31,111.417351 41.31,110.97 L41.31,69.245 C41.31,68.7976494 40.9473506,68.435 40.5,68.435 L30.375,68.435 C29.9276494,68.435 29.565,68.0723506 29.565,67.625 L29.565,50.5 C29.565,50.0526494 29.9276494,49.69 30.375,49.69 Z" id="Path-11" stroke="#004571" stroke-width="4.05"></path>
+                <circle id="Oval" fill="#004571" cx="53.865" cy="118.855" r="2.025"></circle>
+                <circle id="Oval" fill="#004571" cx="39.285" cy="118.855" r="2.025"></circle>
+                <path d="M41,57.755 L41,15.62 C41,14.7252987 41.7252987,14 42.62,14 L216.315,14 C217.209701,14 217.935,14.7252987 217.935,15.62 L217.935,32.465 L217.935,32.465" id="Path-12" stroke="#004571" stroke-width="4.05"></path>
+                <line x1="97.2" y1="13.935" x2="97.2" y2="32.4" id="Path-13" stroke="#004571" stroke-width="4.05"></line>
+                <line x1="157.95" y1="13.935" x2="157.95" y2="32.4" id="Path-13" stroke="#004571" stroke-width="4.05"></line>
+                <line x1="279.855" y1="17.82" x2="279.855" y2="36.045" id="Path-16" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                <line x1="279.855" y1="95.58" x2="279.855" y2="113.805" id="Path-16" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+                <line x1="279.855" y1="173.34" x2="279.855" y2="191.565" id="Path-16" stroke="#004571" stroke-width="4.05" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "FSEmeric";
+  src: url('./assets/fonts/fsemeric/FSEmeric.eot'),
+       url('./assets/fonts/fsemeric/FSEmeric.woff') format('woff'),
+       url('./assets/fonts/fsemeric/FSEmeric.woff2') format('woff2');
+}
+
+* {
+  font-family: "FSEmeric", "Arial", sans-serif !important;
+}
+
+body {
+  margin: auto;
+}
+
+#root {
+  display:-ms-flexbox;
+	-ms-flex-direction:column;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app.is-ios {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  min-height: unset;
+}
+
+.app__container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}

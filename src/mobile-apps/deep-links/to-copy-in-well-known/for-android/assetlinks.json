@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.ufd.areaprivada",
+      "sha256_cert_fingerprints": [
+        "F2:EA:BD:CD:45:11:70:32:C1:FE:08:8A:C5:D8:DC:0B:A8:7F:79:62:EC:41:66:53:C6:04:1B:08:47:AB:49:83"
+      ]
+    }
+  }
+]

@@ -1,0 +1,36 @@
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(() => ({
+    container: {
+        padding: '20px 0',
+    },
+
+    maxWidthForBigScreens: {
+        maxWidth: 1200,
+        padding: '20px'
+    },
+
+    headerTitle: {
+        fontFamily: 'Arial, Helvetica, Arial, serif',
+        fontSize: '36px',
+        fontWeight: 100,
+        color: 'rgba(0, 69, 113, 1.0)',
+        textAlign: 'center',
+        margin: '26px 30px 34px 30px',
+    },
+
+    icon: {
+        width: 18
+    },
+
+    subContainer: {
+        //padding: '2.2rem',
+        marginTop: 20,
+        //boxShadow: '0px 0px 1px 1px ' + colors.lighterBlue,
+        //'-moz-box-shadow': '0px 0px 1px 1px ' + colors.lighterBlue,
+        //'-webkit-box-shadow': '0px 0px 1px 1px ' + colors.lighterBlue,
+        //backgroundColor: '#f7fbfe'
+    }
+}));
+
+export default useStyles;
