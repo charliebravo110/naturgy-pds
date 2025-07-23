@@ -1,7 +1,7 @@
-// NOTE: Estas urls llevan un Hash asociado que es necesario quitar para no registrarlo en Google Analytics
 const URLS_TO_CHANGE = ['/profile/changePassword', '/signup/activate', '/delegation/update']
 
-
+//ESP: Elimina parámetros de ciertas URLs para evitar su registro en Google Analytics.
+//ENG: Removes parameters from specific URLs to prevent their logging in Google Analytics.
 export function removeParamsFromUrls(initialUrl: string, routesUrls: any) {
   let returnItem = false
   routesUrls.forEach(item => {

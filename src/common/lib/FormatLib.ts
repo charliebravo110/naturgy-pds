@@ -1,5 +1,7 @@
 import i18n from 'i18next'
 
+//ESP: Formatea un número CUPS separándolo en grupos para mejor legibilidad.
+//ENG: Formats a CUPS number by splitting it into groups for better readability.
 export function formatCupsNumber(cups: string): string {
   const groups = [
     cups.substr(0, 2),
@@ -15,6 +17,8 @@ export function formatCupsNumber(cups: string): string {
   return groups.filter(Boolean).join(' ')
 }
 
+//ESP: Formatea una fecha en formato DD/MM/YYYY.
+//ENG: Formats a date as DD/MM/YYYY.
 export function formatDate(date: Date): string {
   let day = date.getDate()
   let month = date.getMonth() + 1
@@ -34,8 +38,10 @@ export function formatDate(date: Date): string {
   return formattedDay + '/' + formattedMonth + '/' + year
 }
 
-// INPUT DATE
-// OUTPUT STRING: ddmmyyyyhhmmss
+
+
+//ESP: Devuelve una cadena con la fecha y hora en formato compacto (DDMMYYYYHHMMSS).
+//ENG: Returns a string with date and time in compact format (DDMMYYYYHHMMSS).
 export function formatDateAndHourString(date: Date): string {
   let day = date.getDate()
   let month = date.getMonth() + 1
@@ -66,8 +72,10 @@ export function formatDateAndHourString(date: Date): string {
   return formattedDay + formattedMonth + year + formattedHour + formattedMinutes + formattedSeconds
 }
 
-// INPUT DATE
-// OUTPUT STRING: dd/mm/yyyy hh:mm:ss
+
+ hh:mm:ss
+//ESP: Devuelve una cadena con la fecha y hora en formato DD/MM/YYYY HH:MM:SS.
+//ENG: Returns a string with date and time in format DD/MM/YYYY HH:MM:SS.
 export function formatDateAndHourStringWithBars(date: Date): string {
   let day = date.getDate()
   let month = date.getMonth() + 1
@@ -109,7 +117,7 @@ export function translateDocOfflineDates(dateAndHour: string, returnDate: boolea
   return returnDate ? day + '/' + month + '/' + year : hour + ':' + minutes + ':' + seconds
 }
 
-// yyyymmddhhmmss to yyyy-mm-dd hh:mm:ss
+
 export function convertToFullDate(dateTime: string):string {
 
   const year = dateTime.slice(0, 4);
@@ -125,7 +133,7 @@ export function convertToFullDate(dateTime: string):string {
   return `${formattedDate} ${formattedTime}`;
 }
 
-// yyyymmddhhmmss to yyyy/mm/dd hh:mm:ss
+
 export function formatDateAndTime(date) {
   if (date) {
     const year = date.substring(0, 4)
@@ -138,39 +146,44 @@ export function formatDateAndTime(date) {
   }
 }
 
-// INPUT STRING: yyyymmdd
-// OUTPUT STRING: dd/mm/yyyy
+
+
 export function formatDateString(stringDate: string): string {
+  if (!stringDate || stringDate.length < 8) return '';
   return stringDate.substr(6, 2) + '/' + stringDate.substr(4, 2) + '/' + stringDate.substr(0, 4)
 }
 
-// INPUT STRING: dd/mm/yyyy
-// OUTPUT STRING: mm/dd/yyyy
+
+
 export function formatUSADateString(stringDate: string): string {
-  return stringDate.split('/')[1] + '/' + stringDate.split('/')[0] + '/' + stringDate.split('/')[2]
+  if (!stringDate || stringDate.split('/').length < 3) return '';
+  const parts = stringDate.split('/');
+  return parts[1] + '/' + parts[0] + '/' + parts[2]
 }
 
-// INPUT STRING: hhmm
-// OUTPUT STRING: hh:mm
+
+
 export function formatTimeString(stringTime: string): string {
+  if (!stringTime || stringTime.length < 4) return '';
   return stringTime.substr(0, 2) + ':' + stringTime.substr(2, 2)
 }
 
-// INPUT STRING: yyyymmddhhmm
-// OUTPUT STRING: dd/mm/yyyy hh:mm
 export function formatCompletDateString(stringDate: string): string {
+  if (!stringDate || stringDate.length < 12) return '';
   return stringDate.substr(6, 2) + '/' + stringDate.substr(4, 2) + '/' + stringDate.substr(0, 4) + ' ' + stringDate.substr(8, 2) + ':' + stringDate.substr(10, 2)
 }
 
-// INPUT STRING: dd/mm/yyyy hh:mm:ss
-// OUTPUT STRING: dd/mm/yyyy
+ hh:mm:ss
+
 export function extractDateFromDateAndHourString(stringDateAndHour: string): string {
+  if (!stringDateAndHour || stringDateAndHour.length < 10) return '';
   return stringDateAndHour.substr(0, 10)
 }
 
-// INPUT STRING: dd/mm/yyyy hh:mm:ss
-// OUTPUT STRING: hh:mm
+ hh:mm:ss
+
 export function extractHourFromDateAndHourString(stringDateAndHour: string): string {
+  if (!stringDateAndHour || stringDateAndHour.length < 16) return '';
   return stringDateAndHour.substr(11, 5)
 }
 
@@ -248,19 +261,14 @@ export function formatDayAndMonthToDate(date: string): Date {
 }
 
 export function formatHour(hour: any): string {
-  if (hour < 10) {
-    hour= '0' + hour
-  }
-
-  return hour + ':00'
+  let hourStr = hour < 10 ? '0' + hour : hour.toString();
+  return hourStr + ':00'
 } 
 
 export function formatQuarterHour(hour: any, quarter: any): string {
-  if (hour < 10) {
-    hour= '0' + hour
-  }
-
-  return hour + quarter
+  let hourStr = hour < 10 ? '0' + hour : hour.toString();
+  let quarterStr = quarter.toString().padStart(2, '0');
+  return hourStr + ':' + quarterStr;
 } 
 
 export function formatDay(date: string): string {
@@ -411,24 +419,20 @@ export function getInternationalMonth(month: string): string {
 }
 
 export function gettHourFromDate(date: any): string {
-  let hour = date.getHours(), minutes = date.getMinutes()
-  if(hour < 10){
-    hour = '0' + hour
-  }
-  if(minutes === 0){
-    minutes = '0' + minutes
-  }
-  return hour + ':' + minutes
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let hourStr = hour < 10 ? '0' + hour : hour.toString();
+  let minutesStr = minutes < 10 ? '0' + minutes : minutes.toString();
+  return hourStr + ':' + minutesStr;
 }
 
 export function convertStringToDateHours(time: string): Date {
-  const today = new Date()
-  const hours = time.split(':')[0]
-  const minutes = time.split(':')[1]
-  return new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), hours && parseInt(hours), minutes && parseInt(minutes), 0, 0)
+  const today = new Date();
+  const hours = time.split(':')[0];
+  const minutes = time.split(':')[1];
+  return new Date(today.getFullYear(), today.getMonth(), today.getDate(), hours ? parseInt(hours) : 0, minutes ? parseInt(minutes) : 0, 0, 0);
 }
 
-// INPUT STRING: yyyymmddhhmmss
 // OUTPUT DATE
 export function completeDate (date: string): Date {
   const year = parseInt(date.substr(0, 4))
@@ -441,7 +445,7 @@ export function completeDate (date: string): Date {
   return new Date(year, month - 1, day, hours, minutes, seconds)
 }
 
-// INPUT STRING: dd/mm/yyyy hh:mm:ss
+ hh:mm:ss
 // OUTPUT DATE
 export function completeDateWithSlash (date: string): Date {
   const day = parseInt(date.substring(0, 2));
@@ -459,11 +463,8 @@ export function completeDateWithSlashNoHour (date: string): Date {
   const day = parseInt(date.substring(0, 2));
   const month = parseInt(date.substring(3, 5));
   const year = parseInt(date.substring(6, 10));
-
   return new Date(year, month - 1, day);
 }
-
-/* Calculo de un año posterior a la fecha incial en formato string */
 export function getOneYearFromDate(beginDate: string): Date {
   const parsedDateArray = beginDate.split('/')
   const parsedDate = `${parsedDateArray[1]}/${parsedDateArray[0]}/${parsedDateArray[2]}`
@@ -585,26 +586,20 @@ export function formatIsoDateAndHour(isoString) {
 }
 
 
-export function capitalizeFirstLetter(str) {
-  if (str.length === 0) return str; // Maneja cadenas vacías
+export function capitalizeFirstLetter(str: string): string {
+  if (!str || str.length === 0) return str;
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 
 
-export const formatNumber = (number) => {
-
+export const formatNumber = (number: string | number): string => {
+  if (typeof number === 'number') number = number.toString();
   if (!number || typeof number !== 'string' || isNaN(Number(number.replace(',', '.')))) {
-    return 'No disponible'; // Devolver una cadena vacía si la entrada no es válida
+    return 'No disponible';
   }
-
-  // Dividir el número entre mil y convertirlo a cadena con 2 decimales asegurados
   const dividedByThousand = (Number(number.replace(',', '.')) / 1000).toFixed(2);
-
-  // Convertir a cadena y dividir en parte entera y decimal
   const [integerPart, decimalPart] = dividedByThousand.split('.');
-  // Formatear la parte entera con separadores de miles
   const formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  // Concatenar la parte decimal
   return `${formattedInteger},${decimalPart}`;
 };

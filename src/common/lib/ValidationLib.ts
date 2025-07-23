@@ -1,6 +1,8 @@
 import MasterDataResult from '../interfaces/MasterDataResult';
 import MasterDataService from '../services/MasterDataService';
 
+//ESP: Valida si un email tiene el formato correcto y no pertenece a dominios no válidos.
+//ENG: Validates if an email has the correct format and does not belong to invalid domains.
 export function validateMail(email: string): boolean {
   const emailRegExpr = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/
   const emailNotValid = /@(no|a)\.(es|com)/
@@ -12,6 +14,8 @@ export function validateMail(email: string): boolean {
 }
 
 //1016316 GENERACION
+//ESP: Obtiene los valores de generación de CUPS desde la base de datos maestra.
+//ENG: Retrieves CUPS generation values from the master database.
 export async function getCupsGenerationValue(): Promise<Array<string>> {
   try {
     let masterData = new MasterDataService();
@@ -24,6 +28,8 @@ export async function getCupsGenerationValue(): Promise<Array<string>> {
   }
 }
 //1016316 CONSUMO
+//ESP: Obtiene los valores de consumo de CUPS desde la base de datos maestra.
+//ENG: Retrieves CUPS consumption values from the master database.
 export async function getCupsConsumoValue(): Promise<Array<string>> {
   try {
     let masterData = new MasterDataService();
@@ -39,6 +45,8 @@ export async function getCupsConsumoValue(): Promise<Array<string>> {
 
 
 
+//ESP: Valida un email comprobando si contiene parámetros restringidos obtenidos de la base de datos maestra.
+//ENG: Validates an email by checking if it contains restricted parameters from the master database.
 export async function validateMailParam(email: string): Promise<boolean> {
   let masterData = new MasterDataService();
 
@@ -63,6 +71,8 @@ export async function validateMailParam(email: string): Promise<boolean> {
 }
 
 //1024384 Mejorar procesos area privada
+//ESP: Valida un email específico para telecomunicaciones según parámetros de la base de datos maestra.
+//ENG: Validates a telecom-specific email according to parameters from the master database.
 export async function validateMailParamTele(email: string): Promise<boolean> {
   let masterData = new MasterDataService();
 
@@ -81,6 +91,8 @@ export async function validateMailParamTele(email: string): Promise<boolean> {
   
   }
 
+//ESP: Valida un número de móvil comprobando formato y parámetros restringidos de la base de datos maestra.
+//ENG: Validates a mobile number by checking format and restricted parameters from the master database.
 export async function validateMobileNumberParam(mobile: string): Promise<boolean> {
   let masterData = new MasterDataService();
   let paramStringNumber = await masterData.getUniqueValue('MASTER', 'PARAM_PHONE', 'ES')
@@ -278,7 +290,7 @@ export function validateNIF(id: string): boolean {
   const calculatedletter = LETTERS[idNumber % 23]  
   return idLetter === calculatedletter
 }
-//aqui
+//aqui hago un cambio
 export function validateMobileNumberDoc(mobile: string, document: string ): boolean {
   const telegestion = validateUserCode(document);
   const mobileRegExp =/^[0-9]{9}$/
